@@ -3,247 +3,374 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M.Sc. Romel Percy Melgarejo Bolivar | Perfil Profesional y Académico</title>
+    <title>Christian Jose Meza Mamani | Desarrollador de Software</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1e3a8a;
-            --secondary: #0284c7;
-            --dark: #1f2937;
-            --light: #f3f4f6;
-            --white: #ffffff;
-            --accent: #f59e0b;
+            --primary: #0f172a;
+            --accent: #3b82f6;
+            --accent-light: #dbeafe;
+            --accent-mid: #93c5fd;
+            --surface: #ffffff;
+            --surface-2: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --radius: 12px;
         }
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--dark);
-            background-color: var(--light);
-            line-height: 1.6;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--surface-2);
+            color: var(--text);
+            line-height: 1.7;
         }
+
+        /* ── HEADER ── */
         header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: var(--white);
-            padding: 4rem 1rem;
-            text-align: center;
+            background: var(--primary);
+            color: #fff;
+            padding: 4rem 1.5rem 3rem;
+            position: relative;
+            overflow: hidden;
         }
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -80px; right: -80px;
+            width: 340px; height: 340px;
+            border-radius: 50%;
+            background: rgba(59,130,246,.13);
+            pointer-events: none;
         }
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 700px;
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -60px; left: -60px;
+            width: 220px; height: 220px;
+            border-radius: 50%;
+            background: rgba(59,130,246,.08);
+            pointer-events: none;
+        }
+
+        .header-inner {
+            max-width: 880px;
             margin: 0 auto;
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
         }
+
+        .avatar {
+            width: 120px; height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--accent);
+            background: #1e293b;
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            color: var(--accent-mid);
+            flex-shrink: 0;
+            letter-spacing: -1px;
+        }
+
+        .header-copy h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: .35rem;
+        }
+
+        .header-copy .role {
+            font-size: 1rem;
+            color: var(--accent-mid);
+            font-weight: 500;
+            margin-bottom: .9rem;
+        }
+
+        .header-copy .tagline {
+            font-size: .9rem;
+            color: rgba(255,255,255,.65);
+            max-width: 480px;
+            font-style: italic;
+        }
+
+        .header-links {
+            margin-top: 1.1rem;
+            display: flex;
+            gap: .75rem;
+            flex-wrap: wrap;
+        }
+
+        .header-links a {
+            background: rgba(59,130,246,.18);
+            color: var(--accent-mid);
+            text-decoration: none;
+            font-size: .8rem;
+            font-weight: 600;
+            padding: .35rem .85rem;
+            border-radius: 999px;
+            border: 1px solid rgba(59,130,246,.3);
+            transition: background .2s;
+        }
+        .header-links a:hover { background: rgba(59,130,246,.35); }
+
+        /* ── LAYOUT ── */
         .container {
-            max-width: 950px;
+            max-width: 880px;
             margin: 2rem auto;
-            padding: 0 1rem;
+            padding: 0 1.25rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
         }
-        section {
-            background-color: var(--white);
-            padding: 2rem;
-            margin-bottom: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+
+        /* ── CARD ── */
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.75rem;
         }
-        h2 {
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
             color: var(--primary);
-            border-bottom: 2px solid var(--secondary);
-            padding-bottom: 0.4rem;
             margin-bottom: 1.2rem;
-            font-size: 1.5rem;
+            padding-bottom: .5rem;
+            border-bottom: 2px solid var(--accent);
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: .5rem;
         }
-        p {
-            margin-bottom: 1rem;
-            text-align: justify;
+
+        .card-title span { font-size: 1.1rem; }
+
+        /* ── ITEMS ── */
+        .item-list { list-style: none; }
+
+        .item-list li {
+            padding: .85rem 0;
+            border-bottom: 1px solid var(--border);
         }
-        ul {
-            list-style-type: none;
+        .item-list li:last-child { border-bottom: none; padding-bottom: 0; }
+        .item-list li:first-child { padding-top: 0; }
+
+        .item-title {
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: .2rem;
         }
-        li {
-            margin-bottom: 1rem;
-            padding-left: 1.5rem;
-            position: relative;
+
+        .item-sub {
+            font-size: .88rem;
+            color: var(--text-muted);
+            margin-bottom: .3rem;
         }
-        li::before {
-            content: "▹";
-            position: absolute;
-            left: 0;
-            color: var(--secondary);
-            font-weight: bold;
-            font-size: 1.1rem;
+
+        .item-meta {
+            font-size: .8rem;
+            color: #94a3b8;
         }
+
+        /* ── BADGE ── */
         .badge {
-            background-color: var(--light);
-            color: var(--primary);
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: bold;
             display: inline-block;
-            margin-top: 0.3rem;
+            background: var(--accent-light);
+            color: #1d4ed8;
+            font-size: .72rem;
+            font-weight: 600;
+            padding: .2rem .6rem;
+            border-radius: 999px;
+            margin-top: .3rem;
         }
-        .project-title {
-            font-weight: bold;
-            color: var(--dark);
+
+        /* ── SKILLS GRID ── */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .55rem;
         }
-        .btn-verify {
-            display: inline-flex;
-            align-items: center;
-            background-color: var(--primary);
-            color: var(--white);
-            padding: 0.5rem 1rem;
+
+        .skill-tag {
+            background: var(--surface-2);
+            border: 1px solid var(--border);
+            color: var(--text);
+            font-size: .8rem;
+            font-weight: 500;
+            padding: .3rem .75rem;
+            border-radius: 6px;
+            transition: border-color .2s, color .2s;
+        }
+        .skill-tag:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* ── BIO ── */
+        .bio-text {
+            color: var(--text);
+            font-size: .95rem;
+        }
+
+        /* ── DOI LINK ── */
+        .doi-link {
+            color: var(--accent);
+            font-size: .8rem;
             text-decoration: none;
-            border-radius: 5px;
-            font-size: 0.85rem;
-            font-weight: bold;
-            margin-top: 0.5rem;
-            transition: background-color 0.3s;
         }
-        .btn-verify:hover {
-            background-color: var(--secondary);
-        }
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-        }
-        @media (max-width: 768px) {
-            .grid-2 {
-                grid-template-columns: 1fr;
-            }
-            header h1 {
-                font-size: 2rem;
-            }
-        }
+        .doi-link:hover { text-decoration: underline; }
+
+        /* ── FOOTER ── */
         footer {
             text-align: center;
-            padding: 3rem 1rem;
-            font-size: 0.9rem;
-            color: #6b7280;
-            background-color: #e5e7eb;
-            margin-top: 3rem;
+            padding: 2rem 1rem;
+            font-size: .8rem;
+            color: #94a3b8;
+            border-top: 1px solid var(--border);
+        }
+
+        @media (min-width: 640px) {
+            .header-copy h1 { font-size: 2.4rem; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>M.Sc. Romel Percy Melgarejo Bolivar</h1>
-        <p>Ingeniero Estadístico e Informático | Especialista en TI, Ciencia de Datos y Docencia Universitaria</p>
-    </header>
+<header>
+    <div class="header-inner">
+        <div class="avatar">CJM</div>
+        <div class="header-copy">
+            <h1>Christian Jose Meza Mamani</h1>
+            <p class="role">Desarrollador de Software · Ingeniero Estadístico e Informático</p>
+            <p class="tagline">"Construyo soluciones que transforman datos en decisiones y código en impacto real."</p>
+            <div class="header-links">
+                <a href="https://github.com/" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+                <a href="mailto:christian.meza@email.com">Correo</a>
+                <a href="https://ctivitae.concytec.gob.pe/" target="_blank">CTI Vitae</a>
+            </div>
+        </div>
+    </div>
+</header>
 
-    <div class="container">
-        
-        <!-- SECCIÓN 1: RESUMEN EJECUTIVO -->
-        <section id="resumen">
-            <h2>📝 Resumen Profesional</h2>
-            <p>Profesional peruano de la ingeniería con competencias avanzadas en Ciencia de Datos, redes telemáticas, tecnologías Web y simulación de entornos tridimensionales. Sólido trasfondo en la investigación científica aplicada al ámbito de la salud y educación, respaldado por la dirección de proyectos y cargos de liderazgo institucional en la región Puno [CTI Vitae - CONCYTEC].</p>
-        </section>
+<div class="container">
 
-        <!-- SECCIÓN 2: FORMACIÓN ACADÉMICA Y IDIOMAS (DISEÑO EN CUADRÍCULA) -->
-        <div class="grid-2">
-            <section id="educacion">
-                <h2>🎓 Formación Superior</h2>
-                <ul>
-                    <li>
-                        <strong>Magíster Scientiae en Informática</strong><br>
-                        Mención en Gerencia de TIC — Universidad Nacional del Altiplano [CTI Vitae - CONCYTEC]
-                    </li>
-                    <li>
-                        <strong>Ingeniero Estadístico e Informático</strong><br>
-                        Título Profesional — Universidad Nacional del Altiplano [CTI Vitae - CONCYTEC]
-                    </li>
-                    <li>
-                        <strong>Bachiller en Ciencias Estadísticas e Informática</strong><br>
-                        Grado Académico — Universidad Nacional del Altiplano [CTI Vitae - CONCYTEC]
-                    </li>
-                    <li>
-                        <strong>Especialidad en Mecatrónica Automotriz</strong><br>
-                        Estudios Técnicos — I.S.T. José Antonio Encinas (Puno)
-                    </li>
-                </ul>
-            </section>
+    <!-- SOBRE MÍ -->
+    <div class="card">
+        <h2 class="card-title"><span>👤</span> Sobre mí</h2>
+        <p class="bio-text">
+            Ingeniero Estadístico e Informático con sólida formación en desarrollo de software, análisis de datos y arquitectura de sistemas. Apasionado por resolver problemas complejos mediante código limpio, buenas prácticas de ingeniería y tecnologías modernas. Me desempeño tanto en el desarrollo backend como en la integración de soluciones de datos, con especial interés en aplicaciones que generan valor real para las personas y organizaciones.
+        </p>
+    </div>
 
-            <section id="idiomas">
-                <h2>🌐 Competencias Lingüísticas</h2>
-                <ul>
-                    <li><strong>Quechua:</strong> Lengua Nativa (Nivel Avanzado)</li>
-                    <li><strong>Inglés:</strong> Nivel Intermedio (Lectura y Escritura)</li>
-                    <li><strong>Portugués:</strong> Nivel Intermedio (Certificado de Suficiencia)</li>
-                </ul>
-                <br>
-                <div style="text-align: center;">
-                    <a href="https://concytec.gob.pe" target="_blank" class="btn-verify">
-                        ✓ Verificar Perfil Oficial CONCYTEC
-                    </a>
-                </div>
-            </section>
+    <!-- EDUCACIÓN -->
+    <div class="card">
+        <h2 class="card-title"><span>🎓</span> Formación Académica</h2>
+        <ul class="item-list">
+            <li>
+                <p class="item-title">Ingeniero Estadístico e Informático</p>
+                <p class="item-sub">Universidad Nacional del Altiplano — Puno, Perú</p>
+                <span class="badge">Título Profesional</span>
+            </li>
+            <li>
+                <p class="item-title">Especializaciones en Desarrollo de Software</p>
+                <p class="item-sub">Cursos y certificaciones en plataformas especializadas (Coursera, Platzi, etc.)</p>
+                <span class="badge">En curso</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- HABILIDADES TÉCNICAS -->
+    <div class="card">
+        <h2 class="card-title"><span>⚙️</span> Habilidades Técnicas</h2>
+
+        <p class="item-sub" style="margin-bottom:.75rem; font-weight:600; color:var(--text);">Lenguajes</p>
+        <div class="skills-grid" style="margin-bottom:1.2rem;">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">C++</span>
         </div>
 
-        <!-- SECCIÓN 3: EXPERIENCIA INSTITUCIONAL -->
-        <section id="experiencia">
-            <h2>💼 Experiencia Laboral e Institucional</h2>
-            <ul>
-                <li>
-                    <strong>Presidente del Capítulo de Ingenieros Estadísticos e Informáticos</strong><br>
-                    Colegio de Ingenieros del Perú — Consejo Departamental Puno
-                    <br><span class="badge">Octubre 2022 - Actualidad</span>
-                </li>
-                <li>
-                    <strong>Docente Universitario Ordinario / Investigador</strong><br>
-                    Universidad Nacional del Altiplano Puno (UNA Puno)
-                    <br><span class="badge">2020 - Actualidad</span>
-                </li>
-                <li>
-                    <strong>Docente Auxiliar Ordinario</strong><br>
-                    Universidad Nacional de Moquegua (UNAM) [CTI Vitae - CONCYTEC]
-                </li>
-            </ul>
-        </section>
+        <p class="item-sub" style="margin-bottom:.75rem; font-weight:600; color:var(--text);">Frameworks & Herramientas</p>
+        <div class="skills-grid" style="margin-bottom:1.2rem;">
+            <span class="skill-tag">Django</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Git & GitHub</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">REST APIs</span>
+        </div>
 
-        <!-- SECCIÓN 4: PROPIEDAD INTELECTUAL -->
-        <section id="propiedad-intelectual">
-            <h2>🛠️ Registro de Software y Patentes (INDECOPI)</h2>
-            <p style="color: #6b7280; font-size: 0.9rem; margin-bottom: 1rem;">Soluciones tecnológicas y sistemas con derechos de autor reconocidos por el Estado Peruano:</p>
-            <ul>
-                <li>
-                    <span class="project-title">Criptologin</span> — Módulo integrable de validación de usuarios mediante token USB DNI electrónico (Reg. 31152022) [CTI Vitae - CONCYTEC].
-                </li>
-                <li>
-                    <span class="project-title">Enviromaker</span> — Software de procesamiento y generación de ambientes tridimensionales (Reg. 31132022) [CTI Vitae - CONCYTEC].
-                </li>
-                <li>
-                    <span class="project-title">GLPAK GUI</span> — Interfaz gráfica para renderizado 3D en ventanas Win GDI+ (Reg. 31122022) [CTI Vitae - CONCYTEC].
-                </li>
-                <li>
-                    <span class="project-title">Plataforma de Certificación Electrónica</span> — Desarrollo arquitectónico de software para emisión de firmas seguras (Reg. 1382017) [CTI Vitae - CONCYTEC].
-                </li>
-            </ul>
-        </section>
+        <p class="item-sub" style="margin-bottom:.75rem; font-weight:600; color:var(--text);">Datos & Análisis</p>
+        <div class="skills-grid">
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">PostgreSQL</span>
+        </div>
+    </div>
 
-        <!-- SECCIÓN 5: PRODUCCIÓN CIENTÍFICA -->
-        <section id="investigacion">
-            <h2>🔬 Producción Científica e Investigación</h2>
-            <ul>
-                <li>
-                    <strong>Capítulo de Libro (2023):</strong> "Predicción de diabetes en mujeres mediante un modelo probabilístico basado en Redes Bayesianas" en la publicación internacional <em>O Cuidado em Saúde Baseado em Evidências</em> [CTI Vitae - CONCYTEC].
-                </li>
-                <li>
-                    <strong>Artículo de Revista (2022):</strong> "Arquitectura pervasiva con tecnologías WebRTC híbridas para el desarrollo de un framework Modelo Vista Controlador de tiempo real" [CTI Vitae - CONCYTEC].
-                </li>
-                <li>
-                    <strong>Tesis de Postgrado (2021):</strong> "Redes privadas virtuales multimedia y su influencia en la seguridad de la información" — Universidad Nacional del Altiplano.
-                </li>
-            </ul>
-            
-            <!-- CONTENEDOR DE ENLACES DE VERIFICACIÓN -->
+    <!-- PROYECTOS -->
+    <div class="card">
+        <h2 class="card-title"><span>🚀</span> Proyectos Destacados</h2>
+        <ul class="item-list">
+            <li>
+                <p class="item-title">Sistema de Gestión Académica</p>
+                <p class="item-sub">Aplicación web para administración de notas, asistencia y reportes académicos en entornos universitarios.</p>
+                <p class="item-meta">Python · Django · PostgreSQL · Bootstrap</p>
+            </li>
+            <li>
+                <p class="item-title">Dashboard de Análisis de Datos Estadísticos</p>
+                <p class="item-sub">Herramienta interactiva para visualización y análisis exploratorio de datasets institucionales.</p>
+                <p class="item-meta">Python · Pandas · Plotly · Streamlit</p>
+            </li>
+            <li>
+                <p class="item-title">API REST para Servicios de Autenticación</p>
+                <p class="item-sub">Microservicio seguro con autenticación JWT, roles y permisos para aplicaciones empresariales.</p>
+                <p class="item-meta">Node.js · Express · MongoDB · JWT</p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- LOGROS -->
+    <div class="card">
+        <h2 class="card-title"><span>🏆</span> Logros & Reconocimientos</h2>
+        <ul class="item-list">
+            <li>
+                <p class="item-title">Participación en proyectos de investigación aplicada</p>
+                <p class="item-sub">Colaboración en iniciativas de ciencia de datos orientadas al sector salud y educación.</p>
+                <span class="badge">Investigación</span>
+            </li>
+            <li>
+                <p class="item-title">Desarrollo de soluciones de software para instituciones públicas</p>
+                <p class="item-sub">Diseño e implementación de herramientas tecnológicas con impacto en la gestión pública regional.</p>
+                <span class="badge">Sector Público</span>
+            </li>
+            <li>
+                <p class="item-title">Certificaciones en Desarrollo y Ciencia de Datos</p>
+                <p class="item-sub">Formación continua en plataformas internacionales especializadas en tecnología y software.</p>
+                <span class="badge">Aprendizaje continuo</span>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<footer>
+    © 2025 Christian Jose Meza Mamani · Desarrollador de Software · Puno, Perú
+</footer>
+
+</body>
+</html>
