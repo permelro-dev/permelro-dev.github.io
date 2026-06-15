@@ -1,228 +1,268 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV y Perfil Académico - Romel Percy Melgarejo Bolívar</title>
+    <title>CV Académico - Raúl Cristian Chura Chambilla</title>
+
     <style>
-        body {
+        body{
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f4f6f9;
+            background:#f4f6f9;
+            margin:0;
+            padding:20px;
+            color:#333;
         }
-        header {
-            background-color: #003366;
-            color: #fff;
-            padding: 30px;
-            border-radius: 8px 8px 0 0;
-            text-align: center;
+
+        .container{
+            max-width:1000px;
+            margin:auto;
+            background:white;
+            border-radius:12px;
+            overflow:hidden;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.2em;
+
+        header{
+            background:linear-gradient(135deg,#001f3f,#00509d);
+            color:white;
+            padding:40px;
+            text-align:center;
         }
-        header p {
-            margin: 5px 0 0;
-            font-size: 1.2em;
-            color: #bdc3c7;
+
+        header h1{
+            margin:0;
+            font-size:42px;
         }
-        .container {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 0 0 8px 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+        header p{
+            margin-top:10px;
+            font-size:20px;
+            color:#d6e4f0;
         }
-        h2 {
-            color: #003366;
-            border-bottom: 2px solid #003366;
-            padding-bottom: 5px;
-            margin-top: 25px;
+
+        .content{
+            padding:35px;
         }
-        .profile-info, .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
+
+        h2{
+            color:#003366;
+            border-left:6px solid #00509d;
+            padding-left:10px;
+            margin-top:35px;
         }
-        .profile-info td {
-            padding: 8px;
-            vertical-align: top;
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            margin-top:15px;
         }
-        .profile-info td.label {
-            font-weight: bold;
-            width: 20%;
-            color: #555;
+
+        table td, table th{
+            border:1px solid #ddd;
+            padding:12px;
         }
-        .data-table th, .data-table td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
+
+        table th{
+            background:#003366;
+            color:white;
         }
-        .data-table th {
-            background-color: #f2f2f2;
-            color: #333;
+
+        table tr:nth-child(even){
+            background:#f2f2f2;
         }
-        .data-table tr:nth-child(even) {
-            background-color: #f9f9f9;
+
+        .card{
+            background:#f8fbff;
+            border-left:5px solid #0074D9;
+            padding:15px;
+            margin-top:15px;
+            border-radius:6px;
         }
-        .production-item {
-            margin-bottom: 15px;
-            padding-left: 15px;
-            border-left: 4px solid #3498db;
+
+        ul li{
+            margin-bottom:10px;
         }
-        .production-title {
-            font-weight: bold;
-            color: #2c3e50;
+
+        footer{
+            background:#001f3f;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:30px;
         }
-        .production-meta {
-            font-size: 0.9em;
-            color: #7f8c8d;
+
+        a{
+            color:#0074D9;
+            text-decoration:none;
         }
-        footer {
-            margin-top: 30px;
-            text-align: center;
-            font-size: 0.85em;
-            color: #7f8c8d;
-        }
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+
+        a:hover{
+            text-decoration:underline;
         }
     </style>
 </head>
+
 <body>
 
+<div class="container">
+
     <header>
-        <h1>Romel Percy Melgarejo Bolívar</h1>
-        <p>M.Sc. en Informática | Ingeniero Estadístico e Informático</p>
+        <h1>Raúl Cristian Chura Chambilla</h1>
+        <p>Ingeniería Estadística e Informática | Data Science | Machine Learning | IA</p>
     </header>
 
-    <div class="container">
-        
+    <div class="content">
+
         <h2>Datos Personales</h2>
-        <table class="profile-info">
+
+        <table>
             <tr>
-                <td class="label">Nacionalidad:</td>
+                <td><strong>Nombre Completo</strong></td>
+                <td>Raúl Cristian Chura Chambilla</td>
+            </tr>
+
+            <tr>
+                <td><strong>Código Universitario</strong></td>
+                <td>236567</td>
+            </tr>
+
+            <tr>
+                <td><strong>Nacionalidad</strong></td>
                 <td>Peruana</td>
             </tr>
+
             <tr>
-                <td class="label">Residencia:</td>
+                <td><strong>Residencia</strong></td>
                 <td>Puno, Perú</td>
             </tr>
+
             <tr>
-                <td class="label">Áreas de Interés:</td>
-                <td>Data Science, Telematic Networks, TICs en Educación, Energías Alternativas.</td>
+                <td><strong>Carrera</strong></td>
+                <td>Ingeniería Estadística e Informática</td>
             </tr>
+
             <tr>
-                <td class="label">Perfiles Oficiales:</td>
-                <td>
-                    <a href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=67043" target="_blank">CTI Vitae (Concytec)</a> | 
-                    <a href="https://scholar.google.com/citations?user=G5veeOIAAAAJ&hl=es" target="_blank">Google Académico</a>
-                </td>
+                <td><strong>Universidad</strong></td>
+                <td>Universidad Nacional del Altiplano</td>
             </tr>
         </table>
 
-        <h2>Formación Académica</h2>
-        <table class="data-table">
-            <thead>
-                <tr>
-                    <th>Grado / Título</th>
-                    <th>Especialidad / Descripción</th>
-                    <th>Centro de Estudios</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Magíster Scientiae</strong></td>
-                    <td>Informática con mención en Gerencia de Tecnologías de Información y Comunicaciones</td>
-                    <td>Universidad Nacional del Altiplano (Puno, Perú)</td>
-                </tr>
-                <tr>
-                    <td><strong>Licenciado / Título</strong></td>
-                    <td>Ingeniero Estadístico e Informático</td>
-                    <td>Universidad Nacional del Altiplano (Puno, Perú)</td>
-                </tr>
-                <tr>
-                    <td><strong>Bachiller</strong></td>
-                    <td>Bachiller en Ciencias Estadísticas e Informática</td>
-                    <td>Universidad Nacional del Altiplano (Puno, Perú)</td>
-                </tr>
-            </tbody>
+        <h2>Perfil Profesional</h2>
+
+        <div class="card">
+            Estudiante e investigador en Ingeniería Estadística e Informática con experiencia en desarrollo de software, inteligencia artificial, análisis de datos, machine learning y modelamiento estadístico. 
+            Especializado en Python, RStudio, C++, MySQL, Tkinter y tecnologías orientadas al análisis predictivo y automatización inteligente.
+        </div>
+
+        <div class="card">
+            Experiencia en proyectos académicos relacionados con minería de datos, aprendizaje supervisado y no supervisado, regresión logística, análisis estadístico aplicado, visión computacional y desarrollo de interfaces gráficas profesionales.
+        </div>
+
+        <h2>Áreas de Especialización</h2>
+
+        <ul>
+            <li>Machine Learning e Inteligencia Artificial</li>
+            <li>Deep Learning y Redes Neuronales</li>
+            <li>Análisis Estadístico Avanzado</li>
+            <li>Data Science y Big Data</li>
+            <li>Desarrollo de Software en Python</li>
+            <li>Visualización de Datos</li>
+            <li>Desarrollo de Sistemas con MySQL</li>
+            <li>Programación en C++, Python y R</li>
+            <li>Automatización y Optimización de Procesos</li>
+            <li>Modelos Predictivos y Econometría</li>
+        </ul>
+
+        <h2>Habilidades Técnicas</h2>
+
+        <table>
+            <tr>
+                <th>Tecnología</th>
+                <th>Nivel</th>
+            </tr>
+
+            <tr>
+                <td>Python</td>
+                <td>Avanzado</td>
+            </tr>
+
+            <tr>
+                <td>R / RStudio</td>
+                <td>Avanzado</td>
+            </tr>
+
+            <tr>
+                <td>C++</td>
+                <td>Intermedio - Avanzado</td>
+            </tr>
+
+            <tr>
+                <td>SQL / MySQL</td>
+                <td>Avanzado</td>
+            </tr>
+
+            <tr>
+                <td>Machine Learning</td>
+                <td>Avanzado</td>
+            </tr>
+
+            <tr>
+                <td>LaTeX</td>
+                <td>Avanzado</td>
+            </tr>
+
+            <tr>
+                <td>Git y GitHub</td>
+                <td>Intermedio</td>
+            </tr>
         </table>
 
-        <h2>Experiencia Profesional y Docencia</h2>
-        <table class="data-table">
-            <thead>
-                <tr>
-                    <th>Institución</th>
-                    <th>Cargo / Función</th>
-                    <th>Periodo</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Colegio de Ingenieros del Perú (CD Puno)</strong></td>
-                    <td>Presidente del Capítulo de Ingenieros Estadísticos e Informáticos</td>
-                    <td>Octubre 2022 - Actualidad</td>
-                </tr>
-                <tr>
-                    <td><strong>Universidad Nacional del Altiplano</strong></td>
-                    <td>Docente Universitario / Investigador</td>
-                    <td>Marzo 2020 - Actualidad</td>
-                </tr>
-                <tr>
-                    <td><strong>Universidad Nacional del Altiplano</strong></td>
-                    <td>Instructor del Instituto de Informática</td>
-                    <td>Enero 2016 - Diciembre 2016</td>
-                </tr>
-                <tr>
-                    <td><strong>Universidad Nacional de Moquegua</strong></td>
-                    <td>Docente Ordinario - Auxiliar</td>
-                    <td>Mayo 2015 - Diciembre 2015</td>
-                </tr>
-            </tbody>
-        </table>
+        <h2>Proyectos Destacados</h2>
 
-        <h2>Producción Científica y Publicaciones</h2>
-        
-        <div class="production-item">
-            <div class="production-title">A Lightweight Hybrid Dilated Ghost Model-Based Approach for the Prognosis of Breast Cancer</div>
-            <div class="production-meta">Articulo de Investigación (2022) | Coautor: E. Ramirez-Asis, R. P. M. Bolivar, L. A. Gonzales, S. Chaudhury, R. Kashyap, et al.</div>
+        <div class="card">
+            <strong>Sistema Inteligente de Gestión de Motocicletas Públicas</strong><br>
+            Plataforma para administración de préstamos, estaciones, diagnósticos y control de mantenimiento utilizando bases de datos relacionales y módulos inteligentes.
         </div>
 
-        <div class="production-item">
-            <div class="production-title">Predicción de Diabetes en Mujeres mediante un Modelo Probabilístico basado en Redes Bayesianas</div>
-            <div class="production-meta">Capítulo de Libro (2023) | Fuente: O Cuidado em Saúde Baseado em Evidências | DOI: 10.37885/230412748</div>
+        <div class="card">
+            <strong>Juego Narrativo AAA - Heredero del Abismo</strong><br>
+            Desarrollo de videojuego con narrativa ramificada, decisiones múltiples y mapas interactivos.
         </div>
 
-        <div class="production-item">
-            <div class="production-title">Arquitectura Pervasiva con Tecnologías WebRTC Híbridas para el Desarrollo de un Framework Modelo Vista Controlador de Tiempo Real</div>
-            <div class="production-meta">Artículo de Revista (2022) | Revista de Investigación de la Escuela de Posgrado (UNA) | DOI: 10.26788/riepg.v9i4.1632</div>
+        <div class="card">
+            <strong>Análisis Estadístico sobre Diabetes</strong><br>
+            Investigación basada en regresión logística y modelos estadísticos aplicados a factores asociados a diabetes en adultos.
         </div>
 
-        <div class="production-item">
-            <div class="production-title">La Comunicación Interna en los Trabajadores Administrativos de la UNA Puno Periodo 2013</div>
-            <div class="production-meta">Publicación de Investigación (2019) | Coautor: A. M. M. de Oca Nina, R. P. M. Bolivar.</div>
+        <div class="card">
+            <strong>Sistemas Gráficos en Tkinter</strong><br>
+            Desarrollo de interfaces gráficas modernas para sistemas de ecuaciones, gestión de productos y aplicaciones académicas.
         </div>
 
         <h2>Idiomas</h2>
+
         <ul>
-            <li><strong>Inglés:</strong> Nivel Intermedio (Lectura, Conversación, Escritura)</li>
-            <li><strong>Portugués:</strong> Nivel Intermedio (Lectura, Conversación, Escritura)</li>
-            <li><strong>Quechua:</strong> Lengua materna / Nivel Avanzado en Conversación</li>
+            <li>Español — Nativo</li>
+            <li>Inglés — Intermedio</li>
+            <li>Quechua — Conversación Avanzada</li>
         </ul>
+
+        <h2>Objetivo Profesional</h2>
+
+        <div class="card">
+            Continuar desarrollando soluciones innovadoras en inteligencia artificial, ciencia de datos y desarrollo de software, contribuyendo al avance tecnológico y científico mediante investigación aplicada y sistemas inteligentes.
+        </div>
 
     </div>
 
     <footer>
-        <p>Currículum Vitae Académico generado a partir de registros oficiales de CTI Vitae - CONCYTEC y Google Scholar.</p>
+        © 2026 - Raúl Cristian Chura Chambilla | CV Profesional Académico
     </footer>
+
+</div>
 
 </body>
 </html>
+```
